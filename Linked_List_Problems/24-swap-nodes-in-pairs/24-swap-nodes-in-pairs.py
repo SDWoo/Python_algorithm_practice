@@ -16,7 +16,7 @@ class Solution:
 # Solution 2
 class Solution:
     def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        [root = prev = ListNode(None)
+        root = prev = ListNode(None)
         prev.next = head
 
         while head and head.next:
@@ -28,4 +28,4 @@ class Solution:
 
             head = head.next
             prev = prev.next.next
-        return root.next]
+        return root.next
