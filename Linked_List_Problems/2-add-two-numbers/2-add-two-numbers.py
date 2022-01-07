@@ -38,7 +38,7 @@ class Solution:
         print(a)
         print(b)
         
-        result = int(''.join(str(e) for e in a)) + int(''.join(str(e) for e in b))
+        result = functools.reduce(lambda x,y: 10 * x + y, a, 0)
         return self.toReversedLinkedList(str(result))
 
 # Solution2
