@@ -8,9 +8,9 @@
 # Solution
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        anagrams = collections.defaultdict(list)
+        ana = collections.defaultdict(list)
 
         for word in strs:
-            anagrams[''.join(sorted(word))].append(word)
+            ana[''.join(sorted(word))].append(word)
 
-        return list(anagrams.values())
+        return list(sorted(ana.values(), key=len))
