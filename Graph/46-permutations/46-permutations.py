@@ -19,3 +19,7 @@ class Solution:
                 
         dfs(nums)
         return result
+
+class Solution2:
+    def permute2(self, nums: List[int]) -> List[List[int]]:
+        return list(map(list,itertools.permutations(nums)))
