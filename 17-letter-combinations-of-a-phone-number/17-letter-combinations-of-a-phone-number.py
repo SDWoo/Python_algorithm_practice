@@ -7,6 +7,8 @@ class Solution:
             
             for i in range(index, len(digits)):
                 for j in dic[digits[i]]:
+                    print(i)
+                    print(path + j)
                     dfs(i+1, path + j)
         
         
