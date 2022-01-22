@@ -1,4 +1,3 @@
-#main
 import random
 
 TRAILS = 100000

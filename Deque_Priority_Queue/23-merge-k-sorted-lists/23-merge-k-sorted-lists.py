@@ -10,6 +10,7 @@ class Solution:
         
         for i in range(len(lists)):
             if lists[i]:
+                # 어렵다 이거
                 heapq.heappush(heap, (lists[i].val, i, lists[i]))
                 
         while heap:
