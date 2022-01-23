@@ -1,17 +1,14 @@
 class Solution:
     def findItinerary(self, tickets: List[List[str]]) -> List[str]:
         graph = collections.defaultdict(list)
-        for a, b in tickets:
+        for a,b in sorted(tickets, reverse = True):
             graph[a].append(b)
-        for a in graph:
-            graph[a].sort()
-            print(graph)
-        route = []
         
+        route = []
         def dfs(a):
             print(a)
             while graph[a]:
-                dfs(graph[a].pop(0))
+                dfs(graph[a].pop())
             route.append(a)
             print(a,route)
             
