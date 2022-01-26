@@ -3,7 +3,7 @@ class Solution:
         if n <= 1:
             return [0]
         
-        graph = defaultdict(list)
+        graph = collections.defaultdict(list)
         for i, j in edges:
             graph[i].append(j)
             graph[j].append(i)
