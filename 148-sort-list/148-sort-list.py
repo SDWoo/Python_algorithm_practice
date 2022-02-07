@@ -26,3 +26,20 @@ class Solution:
         l2 = self.sortList(slow)
         
         return self.mergeToLists(l1, l2)
+
+# Solution2
+class Solution2:
+    def sortList(self, head: ListNode) -> ListNode:
+        p = head
+        lst: List = []
+        while p:
+            lst.append(p.val)
+            p = p.next
+
+        lst.sort()
+
+        p = head
+        for i in range(len(lst)):
+            p.val = lst[i]
+            p = p.next
+        return head
