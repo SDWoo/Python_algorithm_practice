@@ -15,3 +15,12 @@ class Solution:
                 row +=1
                 
         return False
+
+# Solution 2
+class Solution:
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+        return any(target in row for row in matrix)
+
+# any() 와 all() 함수
+# any()는 포함된 값중 어느 하나가 참이라면 항상 참으로 출력(논리 합)
+# all()은 포함된 값들 모두가 참이라면 참으로 출력 (논리 곱)
