@@ -10,4 +10,4 @@ class Solution:
             if len(lst) == 1:
                 return lst[0]
             else:
-                num = sum(map(int,lst))
+                num = sum(lst)
