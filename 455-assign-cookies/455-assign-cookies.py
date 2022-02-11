@@ -3,11 +3,10 @@ class Solution:
         g.sort()
         s.sort()
         
-        child_i = cookie_j = 0
+        result = 0
         
-        while child_i < len(g) and cookie_j < len(s):
-            if s[cookie_j] >= g[child_i]:
-                child_i += 1
-            cookie_j +=1
-            
-        return child_i
+        for i in s:
+            index = bisect.bisect(g,i)
+            if index > result:
+                result += 1
+        return result
