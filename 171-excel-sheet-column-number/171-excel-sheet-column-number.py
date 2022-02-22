@@ -17,12 +17,10 @@ class Solution:
                                  
         for s in columnTitle:
             stack.append(s)
-            print(stack)
-        
+
         index = 0
         while stack:
             result += alphabet_dict[stack.pop()] * 26 ** index
-            print(result)
             index += 1
             
         return result
